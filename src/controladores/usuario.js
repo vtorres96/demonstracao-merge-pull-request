@@ -14,7 +14,7 @@ const cadastrar = async (req, res, next) => {
                 mensagem: 'Preencha os campos obrigatórios: nome, email e senha'
             })
         }
-        
+
         const usuarioEncontrado = await conexao.query(
             'select * from usuarios where email = $1',
             [email]
@@ -27,7 +27,7 @@ const cadastrar = async (req, res, next) => {
         }
 
         let senhaCriptografada = await bcrypt.hash(senha, 10)
-        
+
         const usuarioCriado = await conexao.query(
             'insert into usuarios (nome, email, senha) values ($1, $2, $3) returning id, nome, email',
             [nome, email, senhaCriptografada]
@@ -52,8 +52,13 @@ const metodoViteira = (req, res, next) => {
     return res.status(200).json({ mensagem: 'ok' })
 }
 
+const metodoGui = (req, res) => {
+    return res.status(200).json({ mensagem: 'add no lol: é o guilol' })
+}
+
 module.exports = {
     cadastrar,
     listar,
-    metodoViteira
+    metodoViteira,
+    metodoGui
 }
