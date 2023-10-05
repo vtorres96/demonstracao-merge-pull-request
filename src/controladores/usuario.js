@@ -48,7 +48,11 @@ const metodoViteira = (req, res, next) => {
     return res.status(200).json({ mensagem: 'ok' })
 }
 
+
 const metodoGui = (req, res) => {
+    return res.status(200).json({ mensagem: 'add no lol: é o guilol' })
+}
+const metodoLeo = (req, res) => {
     return res.status(200).json({ mensagem: 'add no lol: é o guilol' })
 }
 
@@ -61,5 +65,6 @@ module.exports = {
     listar,
     metodoViteira,
     metodoGui,
+    metodoLeo,
     metodoLuan
 }
