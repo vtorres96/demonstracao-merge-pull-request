@@ -1,10 +1,6 @@
 const bcrypt = require('bcrypt')
 const conexao = require('../bancodedados/conexao')
-// {
-//     "nome": "Victor",
-//     "email": "victor.torres@cubos.academy",
-//     "senha": "teste123"
-// }
+
 const cadastrar = async (req, res, next) => {
     try {
         let { nome, email, senha } = req.body
@@ -59,10 +55,16 @@ const metodoGui = (req, res) => {
 const metodoLeo = (req, res) => {
     return res.status(200).json({ mensagem: 'add no lol: é o guilol' })
 }
+
+const metodoLuan = (req, res) => {
+    return res.status(200).json({ mensagem: 'add no lol: é o guilol' })
+}
+
 module.exports = {
     cadastrar,
     listar,
     metodoViteira,
     metodoGui,
-    metodoLeo
+    metodoLeo,
+    metodoLuan
 }
