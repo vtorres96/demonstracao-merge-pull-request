@@ -48,11 +48,17 @@ const listar = (req, res, next) => {
     }
 }
 
+const metodoViteira = (req, res, next) => {
+    return res.status(200).json({ mensagem: 'ok' })
+}
+
 const metodoGui = (req, res) => {
     return res.status(200).json({ mensagem: 'add no lol: é o guilol' })
 }
 
 module.exports = {
     cadastrar,
-    listar
+    listar,
+    metodoViteira,
+    metodoGui
 }
