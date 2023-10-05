@@ -1,10 +1,6 @@
 const bcrypt = require('bcrypt')
 const conexao = require('../bancodedados/conexao')
-// {
-//     "nome": "Victor",
-//     "email": "victor.torres@cubos.academy",
-//     "senha": "teste123"
-// }
+
 const cadastrar = async (req, res, next) => {
     try {
         let { nome, email, senha } = req.body
