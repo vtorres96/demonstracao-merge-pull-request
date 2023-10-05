@@ -56,9 +56,14 @@ const metodoGui = (req, res) => {
     return res.status(200).json({ mensagem: 'add no lol: é o guilol' })
 }
 
+const metodoLuan = (req, res) => {
+    return res.status(200).json({ mensagem: 'add no lol: é o guilol' })
+}
+
 module.exports = {
     cadastrar,
     listar,
     metodoViteira,
-    metodoGui
+    metodoGui,
+    metodoLuan
 }
